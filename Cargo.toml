@@ -1,0 +1,15 @@
+[package]
+name = "rttk"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dicom-core = "0.10.0"
+dicom-object = "0.10.0"
+ndarray = "0.17.2"
+serde = { version = "1.0.229", features = ["derive"], optional = true }
+thiserror = "2.0.20"
+
+[features]
+default = ["serde"]
+serde = ["dep:serde"]
